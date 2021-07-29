@@ -10,14 +10,18 @@ namespace FEIInterview
     {
         static void Main(string[] args)
         {
-            SlotMachine slot = new SlotMachine();
-            for(int i=0; i<10; i++)
-            {
-                int coins = slot.Play();
-                if (coins == 0) break;
-            }
 
+            SlotMachine slot = new SlotMachine();
+            bool isPlay = true;
+            // cannot continue the game when return flase
+            // either coins 0 or rounds max to 10
+            while (isPlay)
+            {
+                isPlay = slot.Play();
+            }
+            
             Console.ReadKey();
         }
+       
     }
 }
